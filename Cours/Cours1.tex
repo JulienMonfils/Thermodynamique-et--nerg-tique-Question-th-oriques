@@ -1,0 +1,125 @@
+
+\subsection*{Question 1}
+Est-ce que la chaleur échangée entre un système et son extérieur est une variable d'état du système. Justifier votre réponse.
+
+
+\begin{tcolorbox}
+    Non, la chaleur échangée par le système avec son extérieur 
+    n'est pas une variable d'était car $\delta Q$ n'est pas une différentielle exacte $\Rightarrow \oint \delta Q \neq 0$
+    Ce n'est donc pas une variable d'état.\\
+    
+    On peut également le montrer par un contre exemple, si la chaleur échangée était une variable d'était, alors elle serait indépendante de la transformation.
+    Hors on calcul que la chaleur échangée par une transformation adiabatique et une transformation isotherme n'est pas la même.
+\end{tcolorbox}
+
+\subsection*{Question 2}
+
+Donner la définition d'un processus \textit{adiabatique}. Donner un exemple d'un processus adiabatique et réversible ainsi qu'un exemple de processus adiabatique et irréversible.
+
+\begin{tcolorbox}
+    Un processus est adiabatique quand $\delta Q = 0$ tout au long de la transformation.\\
+
+    Un exemple de processus adiabatique réversible est la compression d'un piston dont les parois sont parfaitement isolées et sans frottements.\\
+
+    Pour rendre la transformation adiabatique irréversible, il suffit d'ajouter des frottements.
+\end{tcolorbox}
+
+\subsection*{Question 3}
+
+Donner la définition mathématique ainsi que la signification physique de $c_p$ et $c_v$.
+
+\begin{tcolorbox}
+    Les définitions mathématiques des chaleurs spécifiques sont les suivantes
+    \begin{align*}
+        c_p = \left(\frac{\partial h}{\partial T}\right)_p & &  c_v = \left(\frac{\partial u}{\partial T}\right)_v
+    \end{align*}
+    
+    $c_p$ représente la quantité de chaleur qu'il faut fournir à 1kg de matière pour la faire monter de 1°K à pression constante.\\
+    $c_v$ représente la quantité de chaleur qu'il faut fournir à 1kg de matière pour la faire monter de 1°K à volume constant.
+    
+\end{tcolorbox}
+
+\subsection*{Question 4}
+
+Donner la définition de l'enthalpie libre $F$ de Helmoltz ainsi que de l'enthalpie libre $G$ de Gibbs. Écrivez l'équation de Gibbs sous la forme différentielle de $F$ et $G$
+
+
+\begin{tcolorbox}
+    On a 
+    \begin{align*}
+        F = U - TS & & G = H - TS\\
+        dF = dU - TdS - SdT & & dG = dH - TdS - SdT
+    \end{align*}
+
+    Les formules de Gibbs sont les suivantes : 
+    \begin{align*}
+        TdS = dU + pdV & & TdS = dH - Vdp
+    \end{align*}
+
+    En injectant les différentielles de $F$ et $G$ dans les formules de Gibbs, 
+    on trouve
+    \begin{align*}
+        TdS &=  dU + pdV\\
+        dU - SdT - dF &= dU + pdV\\
+        -SdT &= dF + pdV \\
+        dG - dH + TdS &= dF + pdV
+    \end{align*}
+
+    Aller plus loin ? 
+\end{tcolorbox}
+
+\subsection*{Question 5}
+Dérivez l'équation (1.18), page 9 des notes du chapitre 1, $\alpha = p \beta K$
+
+\begin{tcolorbox}
+    On a une matrice qui doit posséder un nullspace non trivial $\Rightarrow$ On annule sont déterminant
+\end{tcolorbox}
+
+
+\subsection*{Question 6}
+Démontrer que les expressions suivantes sont valables pour toutes les espèces,
+\begin{align*}
+    \left(\frac{\partial T}{\partial P}\right)_s = \left(\frac{\partial v}{\partial s}\right)_P & & \left(\frac{\partial s}{\partial P}\right)_T = -\left(\frac{\partial v}{\partial T}\right)_P
+\end{align*}
+
+\begin{tcolorbox}
+    On utilise le théorème de Schwartz.
+
+    \begin{align*}
+        F = U - TS & \Rightarrow dF = -pdv - SdT\\
+        G = H - TS & \Rightarrow dG = vdp - SdT\\
+    \end{align*}
+    Sur base de ces différentielles, on trouve que 
+    \begin{align*}
+        \left( \frac{\partial F}{\partial V}\right)_T = -p & & \left( \frac{\partial F}{\partial T}\right)_v = -s & & \left( \frac{\partial G}{\partial p}\right)_T = v & & \left( \frac{\partial G}{\partial T}\right)_p = -s
+    \end{align*}
+
+    Par le théorème de Schwartz, 
+    \begin{align*}
+        \frac{\partial^2 F }{\partial T \partial v} &= \frac{\partial^2 F }{\partial v \partial T}\\
+        \left( \frac{\partial p}{\partial T}\right)_v &= \left( \frac{\partial s}{\partial v}\right)_T
+    \end{align*}
+    D'où on trouve que 
+    \begin{equation*}
+        \left(\frac{\partial T}{\partial P}\right)_s = \left(\frac{\partial v}{\partial s}\right)_P
+    \end{equation*}
+
+    On fait le même résonnement avec G pour obtenir la seconde égalité.
+\end{tcolorbox}
+
+
+\subsection*{Question 7}
+Dériver l'équation suivante : 
+\begin{equation*}
+    c_p - c_v = \alpha \beta p v T
+\end{equation*}
+
+\begin{tcolorbox}
+    Réponse au point 4 des notes de cours, chapitre 1.
+\end{tcolorbox}
+
+\subsection*{Question 8}
+
+\begin{tcolorbox}
+    Réponse au point 4 des cnotes de cours, chapitre 1.
+\end{tcolorbox}

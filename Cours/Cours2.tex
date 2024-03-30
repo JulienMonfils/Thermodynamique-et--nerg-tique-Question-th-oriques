@@ -1,0 +1,209 @@
+\subsection*{Question 1}
+
+Démontrer que l'entropie d'un gaz \textbf{idéal} est donnée par l'expression suivante : 
+\begin{equation*}
+    s = s_0(T_0) - R_g \ln \left(\frac{p}{p_0}\right) + \int_{T_0} ^T c_p \frac{dT}{T} = s_0(T_0) + R_g \ln \left(\frac{\rho_0}{\rho}\right) + \int_{T_0}^T c_v \frac{dT}{T}
+\end{equation*}
+
+\begin{tcolorbox}
+    Comme souvent, on va repartir des relations de Gibbs : 
+    \begin{align*}
+        Tds = du + pdv = c_v dT + pdv& & Tds = dh - vdp = c_p dT - vdp
+    \end{align*}
+
+    Première relation : 
+    \begin{align*}
+        ds &= c_v \frac{dT}{T} + \frac{p}{T}dv\\
+        ds &= c_v \frac{dT}{T} + R_g \frac{dv}{v}
+    \end{align*}
+    On intègre cette différentielle et on trouve : 
+    \begin{align*}
+        s - s_0(T_0) = \int_{T_0}^T c_v \frac{dT}{T} + R_g \ln \left(\frac{\rho_0}{\rho}\right)
+    \end{align*}
+    On ne peut pas résoudre l'intégrale sur la température, car pour un gaz idéal, $c_v = c_v(T)$\\
+
+    On fait exactement le même résonnement pour l'autre équation sur base de l'autre relation de Gibbs.
+\end{tcolorbox}
+
+\subsection*{Question 2}
+
+Donner l'expression de la variation d'entropi quand on chauffe un gaz idéal de $T_i$ jusqu'à $T_f$ sous pression constante. Donner également l'expression de la variation d'entropique quand l'élévation de la température est effectuée sous volume constant.
+Lequel des deux processus donne la plus grande augmentation d'entropie ?
+
+\begin{tcolorbox}
+    On utilise les relations de Gibbs : \\
+
+    \textbf{Pressoin constante : }
+    \begin{align*}
+        Tds &= c_p dT\\
+        \delta s &= \int_{T_i}^{T_f} c_p \frac{dT}{T}
+    \end{align*}
+
+    À nouveau, il n'est pas possible de développer plus cette expression, car pour un gaz idéal, $c_p = c_p(T)$\\
+
+    \textbf{Volume constant : }
+    \begin{align*}
+        Tds &= c_v dT\\
+        \delta s &= \int_{T_i}^{T_f} c_v \frac{dT}{T}
+    \end{align*}
+
+    le processus qui mène à la plus grande variation d'entropie est l'augmentation de température à pression constante.\\
+    En effet, $c_p > c_v$.
+\end{tcolorbox}
+
+\subsection*{Question 3}
+
+Définisser la transformation polytropique et établissez-en les équations appliquées au gaz idéal
+
+\begin{tcolorbox}
+    Une transformation polytropique est une relation pour laquelle une des relations suivante est respectée : 
+    \begin{align*}
+        \frac{dH}{TdS} = \Psi  & & \frac{dU}{TdS} = \Phi 
+    \end{align*}
+
+    \textbf{Dans le plan (T,S)} : 
+    \begin{align*}
+        dU = c_v dT = \Phi T dS & & dH = c_p dT = \Psi T dS
+    \end{align*}
+    Ces relations peuvent être intégrées pour obtenir des $\Delta S$, mais en pratique, on ne pourra pas résoudre ces intégrales,
+    car $c_v = c_v(T)$ et $c_p = c_p(T)$
+
+    \textbf{Dans le plan (p, V)} : 
+    \begin{align*}
+        Vdp = dH - TdS = (\Psi - 1)TdS & & pdV = TdS - dU = (1 - \Phi)TdS 
+    \end{align*}
+    En divisant ces deux équation l'une par l'autre, on trouve : 
+    \begin{align*}
+        \frac{\frac{dp}{p}}{\frac{dV}{V}} = \frac{1-\Psi}{\Phi - 1} \triangleq -m
+    \end{align*}
+    À nouveau, on ne peut pas détailler plus comme dans le cas d'un gaz parfait, car $c_p$ et $c_v$ ne sont pas constants,
+    donc $\Phi$, $\Psi$ et $m$ non plus.
+\end{tcolorbox}
+
+
+\subsection*{Question 4}
+
+Quelle est la loi de Dalton ? Donner l'équation d'état d'un mélange homogène des gaz idéaux en appliquant la loi.
+
+\begin{tcolorbox}
+    \textbf{La loi de Dalton s'énonce comme suit : }\\
+    Quand on mélange plusieurs gaz qui ne réagissent pas chimiquement, chacun d'eux se répartir uniformément dans tout le volume offert comme s'il était seul et la pression du mélange
+    a pour valeur la somme des pressions dites partielles qu'aurait chaucun d'eux s'il occupait seul le volume total du mélange.\\
+
+    En pratique, si on a deux gaz idéaux $\alpha$ et $\beta$ dans un volume, on aura :
+    \begin{align*}
+        p_{tot} &= p_\alpha + p_\beta\\
+        p_\alpha &= \frac{m_\alpha R^* T}{v_{tot}}\\
+        p_\beta &= \frac{m_\beta R^* T}{v_{tot}}
+    \end{align*}
+
+\end{tcolorbox}
+
+\subsection*{Question 5}
+Démontrer que si l'énergie interne et l'enthalpie d'une substance ne dépendent que de la température, alors cette substance est un gaz idéal.
+
+\begin{tcolorbox}
+    On a : 
+    \begin{align*}
+        dU = TdS - pdV = C_v dT
+    \end{align*}
+    et 
+    \begin{align*}
+        dH = TdS + Vdp = C_p dT
+    \end{align*}
+    Donc, si $dU$ et $dH$ ne dépendent que de la température, ça veut dire que c'est également le cas
+    pour $c_v$ et $c_p$, donc c'est un gaz idéal.
+\end{tcolorbox}
+
+
+\subsection*{Question 6}
+Considérer l'équation des transformations isochores ainsi que l'équation des transformations isobares d'un gaz idéal. Quelle entre les
+deux éuqations a la pente la plus élevée dans le plan (T,S). Justifiez votre réponse.
+
+\begin{tcolorbox}
+    On a les relations de Gibbs : 
+    \begin{align*}
+        TdS = C_V dT + pdV & & TdS = C_p dT - Vdp
+    \end{align*}
+    Les isobares dans le plan (T,S) on donc l'équation suivante : 
+    \begin{align*}
+        dS = C_p \frac{dT}{T}
+    \end{align*}
+    Les isochores dans le plan (T,S) on donc l'équation suivante : 
+    \begin{align*}
+        dS = C_v \frac{dT}{T}
+    \end{align*}
+
+    Pour un gaz idéal, il n'est pas possible de calculer l'intégrale. En revanche, on peut mettre en évidence les pentes :
+    \begin{align*}
+        \frac{dS}{dT} = \frac{C_p}{T} & &\frac{dS}{dT} = \frac{C_v}{T}\\
+        \frac{dT}{dS} = \frac{T}{C_p} & & \frac{dT}{dS} = \frac{T}{C_v}
+    \end{align*}
+    On sait que $C_p > C_v$, donc les pentes des isochores seront plus élevées que les pentes des isobares.
+\end{tcolorbox}
+
+\subsection*{Question 7}
+Démontrer que l'expression suivante est valable pour des gaz idéaux : $c_p - c_v = R$
+\begin{tcolorbox}
+    On a la relation suivante : 
+    \begin{align*}
+        c_p - c_v = \alpha \beta p v T
+    \end{align*}
+    Pour un gaz idéal, $\alpha$ et $\beta$ ont été déterminés expérimentallement et pour des valeurs de température, pression où
+    le gaz peut exister, on a : 
+    \begin{align*}
+        \alpha = \frac{1}{T} & & \beta = \frac{1}{T}
+    \end{align*}
+
+    On trouve alors
+    \begin{align*}
+        c_p - c_v = \frac{pv}{T}
+    \end{align*}
+    En injectant l'équation des gaz idéaux : $pv = RT$, on trouve $c_p - c_v = R$
+\end{tcolorbox}
+
+\subsection*{Question 8}
+Démontrer que le travail produit par l'expansion isotherme de $N$ moles d'un gaz idéal est donnée par 
+$W = -NRT\ln \left(\frac{V_f}{V_i}\right)$ où $V_i$ est le volume initial et $V_f$ est le volume final.
+\begin{tcolorbox}
+    On a l'équation suivante : 
+    \begin{align*}
+        \delta w &= -pdv\\
+        \delta W &= -NRT \frac{dv}{v}
+    \end{align*}
+    En intégrant cette relation avec la température constante, on trouve : 
+    \begin{align*}
+        W = -NRT\ln \left(\frac{V_f}{V_i}\right)
+    \end{align*}
+\end{tcolorbox}
+
+\subsection*{Question 9}
+Donner la définition de la pression partielle $p_i$ du constituant $i$ dans un mélange homogène de $n$ constituants.\\
+
+    Dériver l'expression de la production d'entropie lors de l'opération de mélange des $\eta_A$ moles d'un gaz idéal $A$ avec $\eta_B$
+    moles d'un gaz idéal $B$. Initiallement, les deux gaz occupent des volumes différents, $V_A$ et $V_B$ séparés par un diaphragme.
+\begin{tcolorbox}
+    \textbf{définition de la pression partielle :}\\
+    Dans un mélange homogène, $p_i$ est la pression qu'occuperait le constituant $i$ si il était seul dans le volume occupé par le mélange.\\
+    Par exemple, dans le cas d'un gaz idéal, $p_i = \frac{\eta_i RT}{V_{Tot}}$.\\
+
+    \textbf{Production d'entropie lors du mélange}
+
+    On part comme d'habitude des relations de Gibbs. On considère que la température est constante lors du mélange.
+    \begin{align*}
+        TdS &= C_v dT + pdV \\
+        TdS &= C_v dT + p d \left(\frac{\eta R_u T}{p}\right)\\
+        TdS &= \left(C_v + \eta R_u\right)dT - \eta R_u T \frac{dp}{p}
+    \end{align*}
+    On a $c_p - c_v = R^* \Rightarrow C_V + \eta R_u = C_p$
+
+    \begin{align*}
+        TdS &= C_p dT - \eta R_u T \frac{dp}{p}\\
+        dS &= C_p \frac{dT}{T} - \eta R_u \frac{dp}{p}
+    \end{align*}
+    Pour obtenir la variation d'entropie, on intègre cette relation
+    \begin{align*}
+        \Delta S &= \int_{T_0}^T C_p \frac{dT}{T}- \eta R_u \ln \left(\frac{p}{p_0}\right)\\
+        \Delta S &= \int_{T_0}^T C_p \frac{dT}{T}- \eta R_u \ln \left(\frac{TV_0}{T_0V}\right)
+    \end{align*}
+\end{tcolorbox}
